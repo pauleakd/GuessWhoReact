@@ -2,6 +2,7 @@ import React from 'react'
 import GameItem from '../components/GameItem'
 import GuessRight from '../components/GuessRight'
 import GuessWrong from '../components/GuessWrong'
+import Board from './Board'
 class GameContainer extends React.Component{
   constructor(props){
     super(props)
@@ -17,16 +18,17 @@ class GameContainer extends React.Component{
         name: "Snape"
       }
     ]}
-    this.characters = this.state.items.map((item)=> {
-      return (
-        <GameItem state={item.state} image={item.image} key={item.name} GuessRight={GuessRight} GuessWrong={GuessWrong}/>
-      )
-    })
+
   }
   render(){
     return(
       <div>
-        {this.characters}
+        <div className="board">
+          <Board characters={this.state.items}/>
+        </div>
+        <div className="guess">
+
+        </div>
       </div>
     )
   }
