@@ -1,20 +1,23 @@
 import React from 'react'
+import Guess from '../containers/Guess'
 
 class GameItem extends React.Component {
   render(){
+    console.log(this.props.name)
     return(
       <div>
+        <h4>{this.props.name}</h4>
         <img src={this.props.image}/>
-        <button onClick={this.guess.bind(this)}>Guess</button>
+        <button onClick={this.makeGuess.bind(this)}> Guess</button>
       </div>
     )
   }
-  guess(){
-    if(this.props.state === true){
-      this.props.GuessRight()
+  makeGuess(){
+    if(this.props.selectedName === this.props.name){
+      this.props.makeRightGuess()
     }
     else{
-      this.props.GuessWrong()
+      this.props.makeWrongGuess()
     }
   }
 }

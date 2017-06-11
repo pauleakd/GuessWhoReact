@@ -6,9 +6,12 @@ import GuessWrong from '../components/GuessWrong'
 class Board extends React.Component{
   constructor(props){
     super(props)
+    console.log(this.props.characters)
     this.gameItems = this.props.characters.map((item)=> {
       return (
-        <GameItem state={item.state} image={item.image} key={item.name} GuessRight={GuessRight} GuessWrong={GuessWrong}/>
+        <GameItem makeWrongGuess={this.props.makeWrongGuess}
+           makeRightGuess={this.props.makeRightGuess}
+           image={item.image} name={item.name} selectedName={this.props.selectedName} key={item.name} makeGuess={this.props.makeGuess}/>
       )}
     )
   }
