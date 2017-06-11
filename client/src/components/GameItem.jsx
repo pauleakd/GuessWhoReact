@@ -10,11 +10,11 @@ class GameItem extends React.Component {
     )
   }
   guess(){
-    if(this.props.status === true){
-      this.props.guessRight()
+    if(this.props.state === true){
+      this.props.GuessRight()
     }
     else{
-      this.props.guessWrong()
+      this.props.GuessWrong()
     }
   }
 }

@@ -1,5 +1,7 @@
 import React from 'react'
 import GameItem from '../components/GameItem'
+import GuessRight from '../components/GuessRight'
+import GuessWrong from '../components/GuessWrong'
 class GameContainer extends React.Component{
   constructor(props){
     super(props)
@@ -17,7 +19,7 @@ class GameContainer extends React.Component{
     ]}
     this.characters = this.state.items.map((item)=> {
       return (
-        <GameItem state={item.state} image={item.image} key={item.name}/>
+        <GameItem state={item.state} image={item.image} key={item.name} GuessRight={GuessRight} GuessWrong={GuessWrong}/>
       )
     })
   }
