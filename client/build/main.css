@@ -5,5 +5,29 @@
 
 img {
   width:100px;
-  height: 100px
+  height: 100px;
+
 }
+
+.gameItem {
+  padding: 1%;
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+}
+
+.name {
+  color: hotPink;
+}
+
+.title {
+  font-family: fantasy;
+  text-align: center;
+}
+.main {
+  margin: 2%;
+}
+
+/*.gameItem img {
+  align: center;
+}*/

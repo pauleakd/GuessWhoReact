@@ -4,6 +4,7 @@ import {HashRouter, Route} from 'react-router-dom'
 import Home from './components/Home'
 import GameContainer from './containers/GameContainer'
 import GuessRight from './components/GuessRight'
+
 window.addEventListener('load', () => {
 
   const targetDiv = document.getElementById('app');
